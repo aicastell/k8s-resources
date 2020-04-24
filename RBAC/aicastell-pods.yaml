@@ -7,10 +7,10 @@ rules:
 - apiGroups: [""] # "" indicates the core API group
   resources: ["pods"]
   verbs: ["get", "watch", "list"]
-- apiGroups: ["apps"] # "" indicates the core API group
+- apiGroups: ["apps"]
   resources: ["deployments"]
   verbs: ["get", "watch", "list"]
----
+--- 
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
@@ -18,9 +18,10 @@ metadata:
   namespace: default
 subjects:
 - kind: User
-  name: ricardo # "name" is case sensitive
+  name: aicastell
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role #this must be Role or ClusterRole
   name: pod-reader # this must match the name of the Role or ClusterRole you wish to bind to
   apiGroup: rbac.authorization.k8s.io
+

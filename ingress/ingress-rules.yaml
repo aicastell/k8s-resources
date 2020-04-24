@@ -6,15 +6,16 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: app1.mydomain.com
+  - host: app1.wittylabs.es
     http:
       paths:
       - backend:
           serviceName: app-v1
           servicePort: 8080
-  - host: app2.mydomain.com
+  - host: app2.wittylabs.es
     http:
       paths:
       - backend:
           serviceName: api-server-svc
           servicePort: 9090
+

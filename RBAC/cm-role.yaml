@@ -23,7 +23,7 @@ metadata:
   namespace: dev
 subjects:
 - kind: User
-  name: ricardo # "name" is case sensitive
+  name: aicastell # "name" is case sensitive
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role #this must be Role or ClusterRole
